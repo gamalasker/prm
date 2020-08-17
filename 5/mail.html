@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+
+.active, .collapsible:hover {
+    background-color: rgb(51, 49, 49);    
+}
+
+.content {
+  padding: 0 18px;
+  font-size: 25px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Des mails et Des sujets </h2>
+
+<p>A-Le mail</p>
+<button type="button" class="collapsible">انقر لتعرف الاجابة الصحيحة</button>
+<div class="content">
+  <p>فكر فى الاجابة ثم انقر لتعرف الحل </p>
+</div>
+
+<p>ايميلات الصف الاول</p>
+<button type="button" class="collapsible">Salut, ça va ? Comment s’appelle ton copain du lycée ?</button>
+<div class="content">
+  <p>Ça va bien. Il s’appelle Jean.</p>
+</div>
+<button type="button" class="collapsible">Où habite ton copain du basket ? Et il à quel âge ?</button>
+<div class="content">
+  <p>Il habite au Caire. Il a 17 ans.</p>
+</div>
+<button type="button" class="collapsible">Bonjour, Tu aimes ton lycée ? Comment est-il ? Et qu’est-ce que tu aimes au lycée ?</button>
+<div class="content">
+  <p>Oui, j’aime mon lycée. Il est grand. J’aime la bibliothèque.</p>
+</div>
+<button type="button" class="collapsible">Tu as un kit ? Quelles sont tes activités manuelles ? Tu fais tes activités où ?</button>
+<div class="content">
+  <p>Oui, j’ai un kit. Je fais des bracelets et des maquettes. Je fais mes activités dans ma chambre.</p>
+</div>
+<button type="button" class="collapsible">Quelle est la date de ta naissance ? La fête de ton anniversaire c’est où ?</button>
+<div class="content">
+  <p>Je suis né le 13 mars 2003. La fête est dans ma maison.</p>
+</div>
+<button type="button" class="collapsible">À quelle heure tu arrives au lycée ? Combien de jours tu as cours par jour ?</button>
+<div class="content">
+  <p>J’arrive au lycée à 8 heures du matin. J’ai 7 cours chaque jour.</p>
+</div>
+<button type="button" class="collapsible">Pourquoi tu vas au CDI ? Combien d’heures tu passes là ?</button>
+<div class="content">
+  <p>Je vais au CDI pour faire des recherches. Je passe 2 heures là. هناك</p>
+</div>
+<button type="button" class="collapsible">À quelle heure le premier cours commence ?</button>
+<div class="content">
+  <p>Le premier cours commence à 9 heures.</p>
+</div>
+<button type="button" class="collapsible">Quelle matière tu préfères ?</button>
+<div class="content">
+  <p>1Je préfère le français.</p>
+</div>
+<button type="button" class="collapsible">Avec qui tu vas au club ? Et pourquoi ?</button>
+<div class="content">
+  Je vais au club avec ma mère. Pour jouer au foot.  
+</div>
+<button type="button" class="collapsible">Où tu vas en vacances ? Quelles activités tu fais ?</button>
+<div class="content">
+  <p>Je vais à Alex en vacances. Je me promène avec mes copains.</p>
+</div>
+<button type="button" class="collapsible">Combien de personnes à ta famille ?</button>
+<div class="content">
+  <p>Il y a 5 personnes dans ma famille.</p>
+</div>
+<button type="button" class="collapsible">Combien de classe y a-t-il dans ton école ?</button>
+<div class="content">
+  <p>Il y 25 classes.</p>
+</div>
+<button type="button" class="collapsible">Où tu vas pour déjeuner ?</button>
+<div class="content">
+  <p>Je vais au self-service pour déjeuner.</p>
+</div>
+<button type="button" class="collapsible">Ton père est comment ?</button>
+<div class="content">
+  <p>Il est sportif.</p>
+</div>
+<button type="button" class="collapsible">Quel est le physique de ta mère ?</button>
+<div class="content">
+  <p>Ma mère est longue et blonde.</p>
+</div>
+<button type="button" class="collapsible">Avec qui tu passes la journée ?</button>
+<div class="content">
+  <p>Je passe la journée avec mes copains.</p>
+</div>
+<button type="button" class="collapsible">Quels jours tu ne vas pas à l’école ?</button>
+<div class="content">
+  <p>Je ne vais pas à l’école le week-end.</p>
+</div>
+<button type="button" class="collapsible">Où vas-tu pour faire du sport ?</button>
+<div class="content">
+  <p>Je vais au club.</p>
+</div>
+<button type="button" class="collapsible">À quelle école vas-tu ?</button>
+<div class="content">
+  <p>Je vais à l’école El-Sadat.</p>
+</div>
+<button type="button" class="collapsible">Quel sport aimes-tu ? </button>
+<div class="content">
+  <p>J’aime le football.</p>
+</div>
+<button type="button" class="collapsible">Qu’est-ce que tu aimes au lycée ? </button>
+<div class="content">
+  <p>Je n’aime pas le CDI.</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
